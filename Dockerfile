@@ -26,3 +26,22 @@ ENV PATH "$PATH:/home/developer/flutter/bin"
 
 # Run basic check to download Dark SDK
 RUN flutter doctor
+# Web dev version
+RUN flutter channel stable
+RUN flutter upgrade
+
+# Install chrome as root due deb package
+# USER root
+
+# RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb -O ./google-chrome-stable_current_amd64.deb
+# RUN dpkg -i ./google-chrome-stable_current_amd64.deb
+# USER developer
+# Check if chrome is installed
+# RUN flutter devices
+# running in chrome
+# RUN flutter run -d chrome
+
+##################################
+# HOW TO WAKE UP SERVER
+# KEEP READING README.MD
+##################################
